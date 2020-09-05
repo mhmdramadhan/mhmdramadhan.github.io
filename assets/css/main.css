@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #191919;
+}
+
+/* navbar */
+*,
+*:before,
+*:before {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2em;
+    height: 100vh;
+}
+
+.container:first-child {
+    display: grid;
+    grid-template-rows: 10px 30px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2em;
+    font-weight: normal;
+    color: white;
+    font-size: 3em;
+    line-height: .9em;
+}
+
+p {
+    line-height: 1.5em;
+    color: rgb(194, 194, 194);
+}
+
+.line {
+    align-self: end;
+    width: 50%;
+    border-right: 1px solid white;
+    height: 50%;
+    margin-bottom: 4em;
+    position: relative;
+}
+
+.line::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 11px 0 11px;
+    border-color: white transparent transparent transparent;
+    right: -.7em;
+    bottom: -2px;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: -10px;
+    font-weight: 100;
+    z-index: 1;
+    position: relative;
+}
+
+.subtext {
+    margin-top: 0;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.secondary {
+    margin-top: -2em;
+}
+
+.mountains {
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 75%;
+}
+
+/* image navbar */
+.mountains {
+    top: 0;
+}
+
+.working {
+    top: 50%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 40%;
+}
+
+/* info panel */
+.info-panel {
+    border-radius: 12px;
+    background-color: hsla(0, 3%, 45%, 0.3);
+    padding: 30px;
+}
+
+.info-panel img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin: auto;
+}
+
+.info-panel h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+.info-panel p {
+    font-size: 11px;
+    color: #acacac;
+    margin-top: -5px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.info-panel p span {
+    font-weight: bold;
+}
+
+/* hr content */
+.hr {
+    width: 90px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: auto;
+}
+
+/* jumbotron */
+.jumbotron {
+    margin-top: 20em;
+    background: url('../img/jumbotron-bg.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 550px;
+}
+
+.txt {
+    /* position: absolute; */
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0px 0 0 0;
+    z-index: 1;
+    left: 20%;
+}
+
+.txt2 {
+    position: relative;
+    font-size: 10px;
+    margin: 10px 0 40px 0;
+    z-index: 1;
+    left: 10%;
+    width: 90%;
+}
+
+.box {
+    position: absolute;
+    margin-top: -10px;
+    left: 10%;
+    z-index: 0;
+    width: 280px;
+    height: 280px;
+    border: 30px solid hsla(0, 3%, 45%, 0.3);
+    overflow: hidden;
+    transform: rotateZ(65deg);
+}
+
+.box2 {
+    position: relative;
+    margin-top: -40px;
+    left: 8%;
+    z-index: 0;
+    width: 80px;
+    height: 80px;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+/* content 3 */
+.content-3 h3 {
+    color: white;
+    font-weight: 200;
+    text-align: center;
+}
+
+.content-3 p {
+    text-align: justify;
+}
+
+.content-3 .pict {
+    width: 50px;
+}
+
+.content-3 span {
+    color: white;
+    text-align: center;
+}
+
+
+
+/* desktop version */
+@media (min-width: 1050px) {
+
+    /* image navbar */
+    .mountains {
+        width: 100%;
+        height: 75%;
+    }
+
+    .working {
+        top: 40%;
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+    }
+
+    /* jumbotron */
+    .jumbotron {
+        margin-top: -200px;
+        height: 400px;
+    }
+
+    .txt {
+        position: absolute;
+        font-size: 45px;
+        text-transform: uppercase;
+        margin: 0 0 0 0;
+        z-index: 1;
+        left: 20%;
+    }
+
+    .txt2 {
+        position: absolute;
+        font-size: 18px;
+        margin: 100px 0 0 0;
+        z-index: 1;
+        left: 10%;
+    }
+
+    .box {
+        position: absolute;
+        margin-top: -150px;
+        left: 30%;
+        z-index: 0;
+        width: 500px;
+        height: 500px;
+        border: 30px solid hsla(0, 3%, 45%, 0.3);
+        overflow: hidden;
+        transform: rotateZ(65deg);
+    }
+
+    .box2 {
+        position: absolute;
+        left: 10%;
+        z-index: 0;
+        width: 120px;
+        height: 120px;
+        border: 20px solid rgba(255, 255, 255, 0.5);
+        overflow: hidden;
+    }
+
+    /* content 3 */
+    .content-3 h3 {
+        text-align: justify;
+    }
+
+    .content-3 span {
+        text-align: justify;
+    }
+
+}
